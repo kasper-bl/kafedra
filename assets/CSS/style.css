@@ -262,8 +262,8 @@ header{
 
 .special_offers_item1{
     background-image: linear-gradient(to right, #0F6688, #18154B),
-    url('./assets/img/bagroung_offers.svg'),
-    url('./assets/img/bagroung_Ellipse.svg') ;
+    url('../assets/img/bagroung_offers.svg'),
+    url('../assets/img/bagroung_Ellipse.svg') ;
     background-blend-mode: overlay; 
     background-repeat: no-repeat;
     background-position: center, left,right;
@@ -316,7 +316,7 @@ header{
 
 /*Второй баннер*/
 .special_offers_item2 {
-    background-image: url('./assets/img/banner.svg');
+    background-image: url('../assets/img/banner.svg');
     background-repeat: no-repeat;
     background-size: cover;
     max-height: 440px;
@@ -376,7 +376,7 @@ header{
 /*Форма*/
 .form {
     margin-top: 50px;
-    background-image:url('./assets/img/bd_image_form.svg');
+    background-image:url('../assets/img/bd_image_form.svg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
@@ -492,7 +492,7 @@ label{
 }
 
 .label::after {
-    content: url('./assets/img/icons/arrow_icon.svg');
+    content: url('../assets/img/icons/arrow_icon.svg');
     position: absolute;
     right: 15px;
     top: 50%;
