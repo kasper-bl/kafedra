@@ -17,18 +17,18 @@ boxes.forEach(box => {
 
 /*Слайдер*/
 const products = [
-  { id: 1, name: 'Antminer L7 8800 Mh/s', img: '/assets/img/hits/hits1.svg', price: 615000, oldPrice: null, badge: 'ХИТ' },
-  { id: 2, name: 'Antminer S19j pro 110 Th/s', img: '/assets/img/hits/hits2.svg', price: 245000, oldPrice: 315000, badge: 'SALE' },
-  { id: 3, name: 'Whatsminer M3x 12.5 Th/...', img: '/assets/img/hits/hits3.svg', price: 14000, oldPrice: null, badge: 'NEW' },
-  { id: 4, name: 'Antminer Z15e 200 ksol', img: '/assets/img/hits/hits4.svg', price: 290000, oldPrice: 325000, badge: 'SALE' },
-  { id: 5, name: 'Innosilicon A11 1500 Mh/s...', img: '/assets/img/hits/hits5.svg', price: 173000, oldPrice: null, badge: 'ХИТ' },
+  { id: 1, name: 'Antminer L7 8800 Mh/s', img: '../assets/img/hits/hits1.svg', price: 615000, oldPrice: null, badge: 'ХИТ' },
+  { id: 2, name: 'Antminer S19j pro 110 Th/s', img: '../assets/img/hits/hits2.svg', price: 245000, oldPrice: 315000, badge: 'SALE' },
+  { id: 3, name: 'Whatsminer M3x 12.5 Th/...', img: '../assets/img/hits/hits3.svg', price: 14000, oldPrice: null, badge: 'NEW' },
+  { id: 4, name: 'Antminer Z15e 200 ksol', img: '../assets/img/hits/hits4.svg', price: 290000, oldPrice: 325000, badge: 'SALE' },
+  { id: 5, name: 'Innosilicon A11 1500 Mh/s...', img: '../assets/img/hits/hits5.svg', price: 173000, oldPrice: null, badge: 'ХИТ' },
 ];
 
 const hitsCart = document.getElementById('hitsCart');
 products.forEach(product => {
   const cartItem = document.createElement('article');
   cartItem.className = 'cart';
-  const isFav = product.id % 2 === 0 ? '/assets/img/hits/favorit2.svg' : '/assets/img/hits/favorit.svg';
+  const isFav = product.id % 2 === 0 ? '../assets/img/hits/favorit2.svg' : '../assets/img/hits/favorit.svg';
 
   cartItem.innerHTML = `
     <div class="badges">
@@ -46,7 +46,7 @@ products.forEach(product => {
       ` : `
         <p>${product.price} ₽</p>
       `}
-      <img src="/assets/img/hits/basket.svg" alt="basket" class="basket_icon">
+      <img src="../assets/img/hits/basket.svg" alt="basket" class="basket_icon">
     </div>
     <a href="#">Купить в 1 клик</a>
   `;
@@ -61,9 +61,9 @@ document.addEventListener('click', (e) => {
     
     // Меняем картинку корзины
     if (e.target.src.includes('basket.svg')) {
-      e.target.src = '/assets/img/basket2.svg';
+      e.target.src = '../assets/img/basket2.svg';
     } else {
-      e.target.src = '/assets/img/hits/basket.svg';
+      e.target.src = '../assets/img/hits/basket.svg';
     }
     cartContainer.classList.add('active');
   }
@@ -75,10 +75,10 @@ document.addEventListener('click', (e) => {
     e.preventDefault();
     
     if (e.target.src.includes('favorit.svg')) {
-      e.target.src = '/assets/img/hits/favorit2.svg';
+      e.target.src = '../assets/img/hits/favorit2.svg';
       e.target.classList.add('active');
     } else {
-      e.target.src = '/assets/img/hits/favorit.svg';
+      e.target.src = '../assets/img/hits/favorit.svg';
       e.target.classList.remove('active');
     }
   }
